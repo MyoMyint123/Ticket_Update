@@ -1,0 +1,211 @@
+html{
+	background: #ffffff;
+	font-family: Arial, Helvetica, sans-serif;
+	padding: 0;
+	margin: 0;
+}
+
+body{
+	background: #ffffff;	
+	margin: 0;
+	padding: 0;
+	min-height: 100vh;
+}
+
+/*city dropdown*/
+.selection .select2-selection--single{
+	height: 33px !important;
+    transition: border-color ease-in-out .15s;
+    border: 1px solid #ccc;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+}
+.select2-dropdown--below{
+	top: -1px;
+	border: 1px solid #ccc;
+}
+.footer{
+	padding: 40px 0 40px 0;
+	background-color: #2d3d4c;
+	color: #fff;
+}
+
+/*index page*/
+.header nav.navbar{
+	margin-bottom: 0;
+}
+.header .navbar-default{
+	background-color: #dfdfdf;
+    border-color: #dfdfdf;
+}
+.navbar-header a.navbar-brand{
+	text-decoration: none;
+	padding-top: 30px;
+	padding-bottom: 30px;
+	height: 80px;
+}
+ul.nav.navbar-nav > li > a{
+	padding-top: 30px;
+	padding-bottom: 30px;
+	text-transform: uppercase;
+}
+ul.nav.navbar-nav > li > a.active{
+	background-color: #dfdfdf !important;
+}
+.navbar-header .navbar-toggle{
+	margin-top: 20px;
+}
+
+.banner{
+	background-color: #20b2aa;
+	background-image: url('../images/banner.jpg');
+	padding: 40px 0 40px 0;
+	background-size: cover;
+    background-position: center;
+}
+.banner form{
+	padding: 20px;
+	padding-bottom: 40px;
+	background-color: #ffffff;
+	border-radius: 5px;
+	box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+label.search_lable{
+	padding: 10px 0 0 0;
+	font-size: 1em;
+	font-weight: bold;
+}
+.banner .side-box{
+	padding: 20px;
+	text-align: center;
+    background: rgba(0,0,0,0.25);
+    color: #fff;
+    font-size: 13px;
+    border-radius: 4px;
+}
+.side-box a#learn-more{
+	background-color: transparent;
+	text-decoration: none;
+	color: #fff;
+	padding: 8px 20px;
+	border: 2px solid rgba(255,255,255,0.5) !important;
+}
+.side-box a#learn-more:hover{
+	background-color: #fff;
+	color: #367daa;
+}
+
+
+/*page2*/
+.top-search-div{
+	padding-top: 20px;
+	padding-bottom: 20px;
+	background-color: #afe0ef;
+}
+.content-section{
+	padding: 15px 0 15px 0;
+	background-color: #efefef;
+	min-height: 350px;
+}
+.filter-side-box{
+	padding: 20px;
+	background-color: #fff;
+}
+.filter-side-box:hover{
+	box-shadow: 0 10px 20px rgba(0,0,0,0.19);
+}
+.trip_result{
+	background-color: #fff;
+	margin-bottom: 10px;
+	border-radius: 3px;
+}
+.trip_result:hover{
+	box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+.trip_result .bus-info{
+	padding: 5px 20px;	
+	border-bottom: 1px solid #eee;
+}
+.trip_result .box{
+	padding: 20px;	
+}
+.box.trip_info h3{
+	margin-top: 0;
+}
+.box.select_seat_btn{
+	margin-top: 20px;
+	text-align: right;
+}
+.box.car_info{
+	text-align: center;
+}
+.box.car_info{
+	margin-top: 20px;
+}
+.box.car_info p{
+	margin-top: 10px;
+}
+
+.no_result{
+	min-height: 300px;
+	padding: 100px 10px;
+}
+
+/*page3 seat*/
+.table-seat-plan{
+	max-width: 100%;
+}
+.driver-seat{
+	background-color: #ddd;
+	border: 1px solid #555;
+	color: #666;
+	padding: 15px 10px 15px 10px;
+	margin: 5px;
+}
+#seat-table td{
+	padding: 4px;
+}
+#seat-table a.seat {
+	display: table;
+	text-decoration: none;
+	width: 100%;
+	height: 100%;
+	background-color: #ddd;
+	border: 1px solid #555;
+	color: #666;
+}
+.seat-unavailable span{
+	background-color: #777;
+	color: #ddd;
+}
+.seat-unavailable:hover{
+	cursor: default;
+}
+.seat-selected span{
+	background-color: #1E90FF;
+	color: #fff;
+}
+#seat-table span{
+	display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+    padding: 10px 5px 10px 5px;
+}
+
+.aisle {
+    display: table-cell;
+}
+.process{
+	padding: 10px 20px 10px 0;
+}
+
+/*page4*/
+
+.form-group .error{
+	color: red;
+}
+
+#depart_date-error,#from_city-error,#to_city-error{
+	color: red;	
+}
+
