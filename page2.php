@@ -20,7 +20,7 @@ $route = $from_city.'-'.$to_city;
 
 $car = new Car($conn);
 $car_data = '';
-$sql = "SELECT * FROM cars WHERE routes='$route' AND departure_date < '$depart_date' AND available_seat >= '$noOfseats' ";
+$sql = "SELECT * FROM cars WHERE routes='$route' AND departure_date < '$depart_date' AND  CURDATE() <= departure_date AND available_seat >= '$noOfseats' ";
 $car_data = $car->select($sql);
 
 ?>

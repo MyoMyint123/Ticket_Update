@@ -9,7 +9,6 @@ session_start();
 
 $car_id = $_POST['car_id'];
 $noOfseats = isset($_POST['noOfseats']) ? $_POST['noOfseats'] : '';
-echo $car_id;
 
 $car = new Car($conn);
 $sql = "SELECT * FROM cars WHERE id='$car_id' ";
