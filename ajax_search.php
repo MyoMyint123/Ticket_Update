@@ -17,10 +17,10 @@ $sql = '';
 
 if($action == ''){
 
-	$sql = "SELECT id, name, departure_date, arrival_date, price, routes, images FROM cars WHERE routes='$route' AND departure_date < '$depart_date' AND  CURDATE() <= departure_date AND available_seat >= '$noOfseats' ";
+	$sql = "SELECT id, name, departure_date, arrival_date, price, routes, images FROM cars WHERE routes='$route' AND departure_date < '$depart_date' AND  now() < departure_date AND available_seat >= '$noOfseats' ";
 }else{
 	
-	$sql = "SELECT id, name, departure_date, arrival_date, price, routes, images FROM cars WHERE routes='$route' AND departure_date < '$depart_date' AND  CURDATE() <= departure_date AND available_seat >= '$noOfseats' AND DATE_FORMAT(departure_date, '%p')='$action' ";
+	$sql = "SELECT id, name, departure_date, arrival_date, price, routes, images FROM cars WHERE routes='$route' AND departure_date < '$depart_date' AND  now() < departure_date AND available_seat >= '$noOfseats' AND DATE_FORMAT(departure_date, '%p')='$action' ";
 }
 
 $car_data = $car->select($sql);
