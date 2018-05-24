@@ -171,6 +171,24 @@ $numOfTraArr = array(1,2,3,4,5,6);
       
       $('.js-dropdown').select2();
 
+      // $('#from_city').change(function(){
+      //   var selected_value = $(this).find(":selected").val();
+      //   console.log(selected_value);
+      //   if(selected_value != ''){
+      //     $('#to_city option[value!='+selected_value+']').show();
+      //     $('#to_city option[value='+selected_value+']').hide();
+      //   }
+      // });
+
+      // $('#to_city').change(function(){
+      // var selected_value = $(this).find(":selected").val();
+      // console.log(selected_value);
+      // if(selected_value != ''){
+      //   $('#from_city option[value!='+selected_value+']').show();
+      //   $('#from_city option[value='+selected_value+']').hide();
+      //  }
+      // });
+
     });
   </script>
 </body>

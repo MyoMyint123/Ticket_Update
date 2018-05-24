@@ -17,7 +17,7 @@ if($_POST['seatIDs']){
 }
 $seats_number = explode(',', $seats_number);
 
-$travellers = $_SESSION["travellers"];
+$noOfseats = $_POST['noOfseats'];
 
 $car_id = $_POST['carID'];
 
@@ -172,7 +172,7 @@ $car_result = $car_obj->select($sql);
                         </tr>
                         <tr>
                           <td>Total </td>
-                          <td><?= $car_result[0]['price']* $travellers ?> MMK</td>
+                          <td><?= $car_result[0]['price']* $noOfseats ?> MMK</td>
                         </tr> 
                       </tbody>
                     </table>          

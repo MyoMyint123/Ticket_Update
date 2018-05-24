@@ -223,11 +223,9 @@ $invalid_seats = $car_data[0]['invalid_seats'];
 
             <h3 class="text-muted text-center">Please select <?= $noOfseats ?> seats</h3>
             <h2 class="seats_to_select text-muted text-center">&nbsp;</h2>
-
-
             <form method="post" action="page4.php">
-
               <input type="hidden" name="seatIDs" id="seatIDs" value="" />
+              <input type="hidden" name="noOfseats" value="<?= $noOfseats ?>" />
               <input type="hidden" name="carID" id="carID" value="<?= $car_id ?>" />
 
               <div class="row">
@@ -235,16 +233,10 @@ $invalid_seats = $car_data[0]['invalid_seats'];
                   <button type="submit" class="btn btn-success form-control">Continue To Travel Info</button>
                 </div>
               </div>
-
-
             </form>
-
-
           </div>
         </div>
-
       </div>
-
     </div>
   </div>
 </div>
@@ -283,7 +275,13 @@ $invalid_seats = $car_data[0]['invalid_seats'];
     var count = seats;
     var seat_array = new Array();
 
-    $(".seat-available").click(function(){
+    $(".seat-unavailable").click(function(e){
+      e.preventDefault();
+    });
+
+    $(".seat-available").click(function(e){
+      e.preventDefault();
+    
       var seat_number ='';
       if($(this).hasClass("seat-selected")){
 
@@ -325,12 +323,10 @@ $invalid_seats = $car_data[0]['invalid_seats'];
       });
      }
    }
- });    
 
-  // $(".seat-unavailable span").html('<span><i class="fa fa-users" aria-hidden="true"></i></span>');
+ });   
 
 });
-
 
 </script>
 </body>
