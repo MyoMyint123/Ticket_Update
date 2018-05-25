@@ -170,7 +170,7 @@ $car_data = $car->select($sql);
                         $tmp_arrived_date =date_create($value['arrival_date']);
                         $arrived_date = date_format($tmp_arrived_date,"F d, h:i A");
                         $interval = date_diff($tmp_start_date,$tmp_arrived_date);
-                        $duration = $interval->format("%h Hours %I Minutes");
+                        $duration = $interval->format("%D days %h Hours %I Minutes");
                         echo $arrived_date." <span>&nbsp;&nbsp;Duration : </span>".$duration;
                         ?>
                       </span>

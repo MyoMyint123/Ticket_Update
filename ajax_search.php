@@ -17,10 +17,10 @@ $sql = '';
 
 if($action == ''){
 
-	$sql = "SELECT id, name, departure_date, arrival_date, price, routes, images FROM cars WHERE routes='$route' AND departure_date < '$depart_date' AND  CURDATE() <= departure_date AND available_seat >= '$noOfseats' ";
+	$sql = "SELECT id, name, departure_date, arrival_date, price, routes, images FROM cars WHERE routes='$route' AND departure_date < '$depart_date' AND  now() < departure_date AND available_seat >= '$noOfseats' ";
 }else{
 	
-	$sql = "SELECT id, name, departure_date, arrival_date, price, routes, images FROM cars WHERE routes='$route' AND departure_date < '$depart_date' AND  CURDATE() <= departure_date AND available_seat >= '$noOfseats' AND DATE_FORMAT(departure_date, '%p')='$action' ";
+	$sql = "SELECT id, name, departure_date, arrival_date, price, routes, images FROM cars WHERE routes='$route' AND departure_date < '$depart_date' AND  now() < departure_date AND available_seat >= '$noOfseats' AND DATE_FORMAT(departure_date, '%p')='$action' ";
 }
 
 $car_data = $car->select($sql);
@@ -64,7 +64,7 @@ $car_data = $car->select($sql);
 											$tmp_arrived_date =date_create($value['arrival_date']);
 											$arrived_date = date_format($tmp_arrived_date,"F d, h:i A");
 											$interval = date_diff($tmp_start_date,$tmp_arrived_date);
-											$duration = $interval->format("%h Hours %I Minutes");
+											$duration = $interval->format("%D days %h Hours %I Minutes");
 											echo $arrived_date." <span>&nbsp;&nbsp;Duration : </span>".$duration;
 											?>
 										</span>
