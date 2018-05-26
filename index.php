@@ -156,10 +156,10 @@ $numOfTraArr = array(1,2,3,4,5,6);
     </div>
   </div>
   <script type="text/javascript" src="dist/js/jquery.min.js"></script>
-  <script type="text/javascript" src="dist/js/jquery-ui.js"></script>
   <script type="text/javascript" src="dist/js/bootstrap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.js"></script>
+  <script type="text/javascript" src="dist/js/jquery-ui.js"></script>
 
   <script>
     $(document).ready(function() {

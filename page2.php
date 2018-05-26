@@ -11,8 +11,10 @@ $routes = array('Yangon','Mandalay','Monywa','Pakokku');
 
 $from_city = isset($_GET['from_city']) ? $_GET['from_city'] : '';
 $to_city = isset($_GET['to_city']) ? $_GET['to_city'] : '';
-$depart_date = isset($_GET['depart_date']) ? $_GET['depart_date'] : '';
+$tmp_depart_date = isset($_GET['depart_date']) ? $_GET['depart_date'] : '';
 $noOfseats = isset($_GET['noOfseats']) ? $_GET['noOfseats'] : '';
+
+$depart_date = $tmp_depart_date.' 23:59:00';
 
 $numOfTraArr = array(1,2,3,4,5,6);
 
@@ -96,7 +98,7 @@ $car_data = $car->select($sql);
             </div>
             <div class="col-md-2 col-sm-5 col-xs-6 margin-top-sm">
               <label for="depart_date" class="search_lable">Departure Date</label>
-              <input type="text"  class="form-control" name="depart_date" id="depart_date" value="<?= $depart_date ?>" required />
+              <input type="text"  class="form-control" name="depart_date" id="depart_date" value="<?= $tmp_depart_date ?>" required />
             </div>
             <div class="col-md-2 col-sm-5 col-xs-6 margin-top-sm">
               <label for="noOfseats" class="search_lable">No: of Seats</label>

@@ -9,16 +9,10 @@ session_start();
 
 $seats_number = array('');
 if($_POST['seatIDs']){
- if(is_array($_POST['seatIDs'])){
-  $seats_number = $_POST['seatIDs'];
-}else{
-  $seats_number = $_POST['seatIDs'];
+    $seats_number = $_POST['seatIDs'];
 }
-}
-$seats_number = explode(',', $seats_number);
 
 $noOfseats = $_POST['noOfseats'];
-
 $car_id = $_POST['carID'];
 
 $car_obj = new Car($conn);

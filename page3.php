@@ -288,41 +288,43 @@ $invalid_seats = $car_data[0]['invalid_seats'];
         if(count <= seats){
           $(this).removeClass("seat-selected");
           count++;
+          // console.log(count);
           seat_number = $(this).data("seat-number");
 
-        // delete seat_array[seat_number];
-        seat_array.splice($.inArray(seat_number, seat_array),1);
-        console.log(seat_array);
-        $('.seats_to_select').text('');
+          // delete seat_array[seat_number];
+          seat_array.splice($.inArray(seat_number, seat_array),1);
+          console.log(seat_array);
+          $('.seats_to_select').text('');
 
-        //reduce selected seat      
-        if(seat_array.length > 0){
-          $('#seatIDs').val(seat_array);
-          $.each( seat_array, function( index, value ){
-            $('.seats_to_select').append('<span class="badge">'+value+'</span> ');
+          //reduce selected seat      
+          if(seat_array.length > 0){
+            $('#seatIDs').val(seat_array);
+            $.each( seat_array, function( index, value ){
+              $('.seats_to_select').append('<span class="badge">'+value+'</span> ');
 
-          });
-        }else{
-          seat_array = new Array();
-        }            
-      } 
+            });
+          }else{
+            seat_array = new Array();
+          }            
+        } 
 
-    }else{
-      if(count >= 1){
-       $(this).addClass("seat-selected");
-       count--;
-       seat_number = $(this).data("seat-number");
+      }else{
+        if(count >= 1){
+         $(this).addClass("seat-selected");
+         count--;
+         console.log(count);
+         seat_number = $(this).data("seat-number");
 
-       seat_array.push(seat_number);
+         seat_array.push(seat_number);
 
-       console.log(seat_array);
-       $('.seats_to_select').text('');
-       $('#seatIDs').val(seat_array);
-       $.each( seat_array, function( index, value ){
-        $('.seats_to_select').append('<span class="badge">'+value+'</span> ');
-      });
+         // console.log(seat_array);
+         $('.seats_to_select').text('');
+         $('#seatIDs').val(seat_array);
+         $.each( seat_array, function( index, value ){
+          $('.seats_to_select').append('<span class="badge">'+value+'</span> ');
+        });
+       }
      }
-   }
 
  });   
 
