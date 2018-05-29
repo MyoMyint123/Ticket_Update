@@ -80,7 +80,7 @@ $numOfTraArr = array(1,2,3,4,5,6);
               <div class="row">
                 <div class="col-md-6">
                   <label for="depart_date" class="search_lable">Departure Date</label>
-                  <input type="text"  class="form-control" name="depart_date" id="depart_date" required />
+                  <input type="text"  class="form-control" name="depart_date" id="depart_date" autocomplete="off" required />
                 </div>
                 <div class="col-md-6">
                   <div class="row">

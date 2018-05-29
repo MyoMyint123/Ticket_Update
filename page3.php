@@ -230,7 +230,7 @@ $invalid_seats = $car_data[0]['invalid_seats'];
 
               <div class="row">
                 <div class="col-md-12 col-sm-12 col-xs-12">
-                  <button type="submit" class="btn btn-success form-control">Continue To Travel Info</button>
+                  <button type="submit" class="btn btn-success form-control continue-btn" disabled >Continue To Travel Info</button>
                 </div>
               </div>
             </form>
@@ -325,6 +325,12 @@ $invalid_seats = $car_data[0]['invalid_seats'];
         });
        }
      }
+if(count == 0){
+  $('.continue-btn').attr('disabled', false);
+}else{
+  $('.continue-btn').attr('disabled', true);
+}
+console.log(count);
 
  });   
 

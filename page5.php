@@ -21,7 +21,6 @@ if($_POST['seatIDs']){
 $name = $_POST['name'];
 $email = $_POST['email'];
 $phone = $_POST['phone'];
-$travellers = $_SESSION["travellers"];
 $car_id = $_POST['carID'];
 
 
@@ -138,16 +137,7 @@ $user->insert($sql);
                         <tr>
                           <td>  Seat Number </td>
                           <td>
-                            <?
-                            $seat_count = count($seats_number);
-                            for ($i=0; $i < $seat_count; $i++) { 
-                              if($i == $seat_count-1){
-                                echo $seats_number[$i];
-                              }else{
-                                echo $seats_number[$i] .', ';
-                              }
-                            }
-                            ?>
+                            <?= $seats_group ?>
                           </td>
                         </tr>
                         

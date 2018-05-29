@@ -152,16 +152,7 @@ $car_result = $car_obj->select($sql);
                         <tr>
                           <td>  Seat Number </td>
                           <td>
-                            <?
-                            $seat_count = count($seats_number);
-                            for ($i=0; $i < $seat_count; $i++) { 
-                              if($i == $seat_count-1){
-                                echo $seats_number[$i];
-                              }else{
-                                echo $seats_number[$i] .', ';
-                              }
-                            }
-                            ?>
+                            <?= $seats_number; ?>
                           </td>
                         </tr>
                         <tr>

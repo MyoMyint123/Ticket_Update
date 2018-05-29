@@ -98,7 +98,7 @@ $car_data = $car->select($sql);
             </div>
             <div class="col-md-2 col-sm-5 col-xs-6 margin-top-sm">
               <label for="depart_date" class="search_lable">Departure Date</label>
-              <input type="text"  class="form-control" name="depart_date" id="depart_date" value="<?= $tmp_depart_date ?>" required />
+              <input type="text"  class="form-control" name="depart_date" id="depart_date" autocomplete="off" value="<?= $tmp_depart_date ?>" required />
             </div>
             <div class="col-md-2 col-sm-5 col-xs-6 margin-top-sm">
               <label for="noOfseats" class="search_lable">No: of Seats</label>
